@@ -18,21 +18,19 @@ Gets all areas. Areas can be filtered by &#x60;type&#x60; and &#x60;parent&#x60;
 
 ### Example
 ```javascript
-var Election = require('election');
+import Election from 'election';
 
-var apiInstance = new Election.DefaultApi();
-var opts = {
+let apiInstance = new Election.DefaultApi();
+let opts = {
   'type': ["null"], // [String] | 
   'parent': ["null"] // [String] | 
 };
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.areasGet(opts, callback);
+apiInstance.areasGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
@@ -63,18 +61,16 @@ No authorization required
 
 ### Example
 ```javascript
-var Election = require('election');
+import Election from 'election';
 
-var apiInstance = new Election.DefaultApi();
-var identifier = "identifier_example"; // String | 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.areasIdentifierGet(identifier, callback);
+let apiInstance = new Election.DefaultApi();
+let identifier = "identifier_example"; // String | 
+apiInstance.areasIdentifierGet(identifier).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
 ```
 
 ### Parameters
