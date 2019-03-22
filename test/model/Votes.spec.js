@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -62,18 +62,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property electionDayVotes (base name: "electionDayVotes")', function() {
-      // uncomment below and update the code to test the property electionDayVotes
-      //var instance = new Election.Votes();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalVotes (base name: "totalVotes")', function() {
-      // uncomment below and update the code to test the property totalVotes
-      //var instance = new Election.Votes();
-      //expect(instance).to.be();
-    });
-
     it('should have the property advancePercent (base name: "advancePercent")', function() {
       // uncomment below and update the code to test the property advancePercent
       //var instance = new Election.Votes();
@@ -86,8 +74,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property electionDayVotes (base name: "electionDayVotes")', function() {
+      // uncomment below and update the code to test the property electionDayVotes
+      //var instance = new Election.Votes();
+      //expect(instance).to.be();
+    });
+
     it('should have the property totalPercent (base name: "totalPercent")', function() {
       // uncomment below and update the code to test the property totalPercent
+      //var instance = new Election.Votes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property totalVotes (base name: "totalVotes")', function() {
+      // uncomment below and update the code to test the property totalVotes
       //var instance = new Election.Votes();
       //expect(instance).to.be();
     });

@@ -1,7 +1,7 @@
 {
   "name": "election",
   "version": "1.0.0",
-  "description": "KSF_Medias_articles_service",
+  "description": "KSF_Medias_election_service",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {

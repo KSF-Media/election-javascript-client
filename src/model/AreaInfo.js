@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -43,15 +43,15 @@
    * @alias module:model/AreaInfo
    * @class
    * @param identifier {String} 
-   * @param areaType {module:model/AreaType} 
    * @param abbreviation {module:model/I18N} 
+   * @param areaType {module:model/AreaType} 
    */
-  var exports = function(identifier, areaType, abbreviation) {
+  var exports = function(identifier, abbreviation, areaType) {
     var _this = this;
 
     _this['identifier'] = identifier;
-    _this['areaType'] = areaType;
     _this['abbreviation'] = abbreviation;
+    _this['areaType'] = areaType;
   };
 
   /**
@@ -67,20 +67,20 @@
       if (data.hasOwnProperty('identifier')) {
         obj['identifier'] = ApiClient.convertToType(data['identifier'], 'String');
       }
-      if (data.hasOwnProperty('areaType')) {
-        obj['areaType'] = AreaType.constructFromObject(data['areaType']);
-      }
       if (data.hasOwnProperty('joinedArea')) {
         obj['joinedArea'] = ApiClient.convertToType(data['joinedArea'], 'Boolean');
       }
       if (data.hasOwnProperty('abbreviation')) {
         obj['abbreviation'] = I18N.constructFromObject(data['abbreviation']);
       }
+      if (data.hasOwnProperty('municipalityType')) {
+        obj['municipalityType'] = MunicipalityType.constructFromObject(data['municipalityType']);
+      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = I18N.constructFromObject(data['name']);
       }
-      if (data.hasOwnProperty('municipalityType')) {
-        obj['municipalityType'] = MunicipalityType.constructFromObject(data['municipalityType']);
+      if (data.hasOwnProperty('areaType')) {
+        obj['areaType'] = AreaType.constructFromObject(data['areaType']);
       }
       if (data.hasOwnProperty('languageRation')) {
         obj['languageRation'] = LanguageRation.constructFromObject(data['languageRation']);
@@ -97,10 +97,6 @@
    */
   exports.prototype['identifier'] = undefined;
   /**
-   * @member {module:model/AreaType} areaType
-   */
-  exports.prototype['areaType'] = undefined;
-  /**
    * @member {Boolean} joinedArea
    */
   exports.prototype['joinedArea'] = undefined;
@@ -109,13 +105,17 @@
    */
   exports.prototype['abbreviation'] = undefined;
   /**
+   * @member {module:model/MunicipalityType} municipalityType
+   */
+  exports.prototype['municipalityType'] = undefined;
+  /**
    * @member {module:model/I18N} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * @member {module:model/MunicipalityType} municipalityType
+   * @member {module:model/AreaType} areaType
    */
-  exports.prototype['municipalityType'] = undefined;
+  exports.prototype['areaType'] = undefined;
   /**
    * @member {module:model/LanguageRation} languageRation
    */

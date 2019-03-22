@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -59,13 +59,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('partyIdentifier')) {
-        obj['partyIdentifier'] = ApiClient.convertToType(data['partyIdentifier'], 'Number');
-      }
-      if (data.hasOwnProperty('standardPartyNumber')) {
-        obj['standardPartyNumber'] = ApiClient.convertToType(data['standardPartyNumber'], 'Number');
+        obj['partyIdentifier'] = ApiClient.convertToType(data['partyIdentifier'], 'String');
       }
       if (data.hasOwnProperty('nominatorNumber')) {
         obj['nominatorNumber'] = ApiClient.convertToType(data['nominatorNumber'], 'Number');
+      }
+      if (data.hasOwnProperty('votes')) {
+        obj['votes'] = Votes.constructFromObject(data['votes']);
       }
       if (data.hasOwnProperty('abbreviation')) {
         obj['abbreviation'] = I18N.constructFromObject(data['abbreviation']);
@@ -73,37 +73,37 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = I18N.constructFromObject(data['name']);
       }
-      if (data.hasOwnProperty('electoralAllianceNumber')) {
-        obj['electoralAllianceNumber'] = ApiClient.convertToType(data['electoralAllianceNumber'], 'Number');
-      }
       if (data.hasOwnProperty('electoralAllianceName')) {
         obj['electoralAllianceName'] = I18N.constructFromObject(data['electoralAllianceName']);
-      }
-      if (data.hasOwnProperty('votes')) {
-        obj['votes'] = Votes.constructFromObject(data['votes']);
       }
       if (data.hasOwnProperty('seats')) {
         obj['seats'] = ApiClient.convertToType(data['seats'], 'Number');
       }
+      if (data.hasOwnProperty('standardPartyNumber')) {
+        obj['standardPartyNumber'] = ApiClient.convertToType(data['standardPartyNumber'], 'Number');
+      }
       if (data.hasOwnProperty('candidates')) {
         obj['candidates'] = ApiClient.convertToType(data['candidates'], [Candidate]);
+      }
+      if (data.hasOwnProperty('electoralAllianceNumber')) {
+        obj['electoralAllianceNumber'] = ApiClient.convertToType(data['electoralAllianceNumber'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} partyIdentifier
+   * @member {String} partyIdentifier
    */
   exports.prototype['partyIdentifier'] = undefined;
-  /**
-   * @member {Number} standardPartyNumber
-   */
-  exports.prototype['standardPartyNumber'] = undefined;
   /**
    * @member {Number} nominatorNumber
    */
   exports.prototype['nominatorNumber'] = undefined;
+  /**
+   * @member {module:model/Votes} votes
+   */
+  exports.prototype['votes'] = undefined;
   /**
    * @member {module:model/I18N} abbreviation
    */
@@ -113,25 +113,25 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * @member {Number} electoralAllianceNumber
-   */
-  exports.prototype['electoralAllianceNumber'] = undefined;
-  /**
    * @member {module:model/I18N} electoralAllianceName
    */
   exports.prototype['electoralAllianceName'] = undefined;
-  /**
-   * @member {module:model/Votes} votes
-   */
-  exports.prototype['votes'] = undefined;
   /**
    * @member {Number} seats
    */
   exports.prototype['seats'] = undefined;
   /**
+   * @member {Number} standardPartyNumber
+   */
+  exports.prototype['standardPartyNumber'] = undefined;
+  /**
    * @member {Array.<module:model/Candidate>} candidates
    */
   exports.prototype['candidates'] = undefined;
+  /**
+   * @member {Number} electoralAllianceNumber
+   */
+  exports.prototype['electoralAllianceNumber'] = undefined;
 
 
 

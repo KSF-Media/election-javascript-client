@@ -25,43 +25,43 @@
     if (!root.Election) {
       root.Election = {};
     }
-    root.Election.Status = factory(root.Election.ApiClient);
+    root.Election.Language = factory(root.Election.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * Enum class Status.
+   * Enum class Language.
    * @enum {}
    * @readonly
    */
   var exports = {
     /**
-     * value: "ELECTED"
+     * value: "FI"
      * @const
      */
-    "ELECTED": "ELECTED",
+    "FI": "FI",
     /**
-     * value: "SUBSTITUTE"
+     * value: "SE"
      * @const
      */
-    "SUBSTITUTE": "SUBSTITUTE",
+    "SE": "SE",
     /**
-     * value: "NOT_ELECTED"
+     * value: "SV"
      * @const
      */
-    "NOT_ELECTED": "NOT_ELECTED",
+    "SV": "SV",
     /**
-     * value: "INELIGIBLE"
+     * value: "EN"
      * @const
      */
-    "INELIGIBLE": "INELIGIBLE"  };
+    "EN": "EN"  };
 
   /**
-   * Returns a <code>Status</code> enum value from a Javascript object name.
+   * Returns a <code>Language</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/Status} The enum <code>Status</code> value.
+   * @return {module:model/Language} The enum <code>Language</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;

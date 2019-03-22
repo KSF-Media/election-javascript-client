@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -61,20 +61,20 @@
       if (data.hasOwnProperty('advanceVotes')) {
         obj['advanceVotes'] = ApiClient.convertToType(data['advanceVotes'], 'Number');
       }
-      if (data.hasOwnProperty('electionDayVotes')) {
-        obj['electionDayVotes'] = ApiClient.convertToType(data['electionDayVotes'], 'Number');
-      }
-      if (data.hasOwnProperty('totalVotes')) {
-        obj['totalVotes'] = ApiClient.convertToType(data['totalVotes'], 'Number');
-      }
       if (data.hasOwnProperty('advancePercent')) {
         obj['advancePercent'] = ApiClient.convertToType(data['advancePercent'], 'Number');
       }
       if (data.hasOwnProperty('electionDayPercent')) {
         obj['electionDayPercent'] = ApiClient.convertToType(data['electionDayPercent'], 'Number');
       }
+      if (data.hasOwnProperty('electionDayVotes')) {
+        obj['electionDayVotes'] = ApiClient.convertToType(data['electionDayVotes'], 'Number');
+      }
       if (data.hasOwnProperty('totalPercent')) {
         obj['totalPercent'] = ApiClient.convertToType(data['totalPercent'], 'Number');
+      }
+      if (data.hasOwnProperty('totalVotes')) {
+        obj['totalVotes'] = ApiClient.convertToType(data['totalVotes'], 'Number');
       }
     }
     return obj;
@@ -85,14 +85,6 @@
    */
   exports.prototype['advanceVotes'] = undefined;
   /**
-   * @member {Number} electionDayVotes
-   */
-  exports.prototype['electionDayVotes'] = undefined;
-  /**
-   * @member {Number} totalVotes
-   */
-  exports.prototype['totalVotes'] = undefined;
-  /**
    * @member {Number} advancePercent
    */
   exports.prototype['advancePercent'] = undefined;
@@ -101,9 +93,17 @@
    */
   exports.prototype['electionDayPercent'] = undefined;
   /**
+   * @member {Number} electionDayVotes
+   */
+  exports.prototype['electionDayVotes'] = undefined;
+  /**
    * @member {Number} totalPercent
    */
   exports.prototype['totalPercent'] = undefined;
+  /**
+   * @member {Number} totalVotes
+   */
+  exports.prototype['totalVotes'] = undefined;
 
 
 

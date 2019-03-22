@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -56,14 +56,14 @@
       //expect(instance).to.be.a(Election.Candidate);
     });
 
-    it('should have the property candidateNumber (base name: "candidateNumber")', function() {
-      // uncomment below and update the code to test the property candidateNumber
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
 
-    it('should have the property firstName (base name: "firstName")', function() {
-      // uncomment below and update the code to test the property firstName
+    it('should have the property membership (base name: "membership")', function() {
+      // uncomment below and update the code to test the property membership
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
@@ -74,20 +74,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property gender (base name: "gender")', function() {
-      // uncomment below and update the code to test the property gender
-      //var instance = new Election.Candidate();
-      //expect(instance).to.be();
-    });
-
     it('should have the property age (base name: "age")', function() {
       // uncomment below and update the code to test the property age
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
 
-    it('should have the property occupation (base name: "occupation")', function() {
-      // uncomment below and update the code to test the property occupation
+    it('should have the property comparativeIndex (base name: "comparativeIndex")', function() {
+      // uncomment below and update the code to test the property comparativeIndex
+      //var instance = new Election.Candidate();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property votes (base name: "votes")', function() {
+      // uncomment below and update the code to test the property votes
+      //var instance = new Election.Candidate();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property candidateNumber (base name: "candidateNumber")', function() {
+      // uncomment below and update the code to test the property candidateNumber
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
@@ -104,26 +110,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property gender (base name: "gender")', function() {
+      // uncomment below and update the code to test the property gender
+      //var instance = new Election.Candidate();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property occupation (base name: "occupation")', function() {
+      // uncomment below and update the code to test the property occupation
+      //var instance = new Election.Candidate();
+      //expect(instance).to.be();
+    });
+
     it('should have the property language (base name: "language")', function() {
       // uncomment below and update the code to test the property language
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new Election.Candidate();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property comparativeIndex (base name: "comparativeIndex")', function() {
-      // uncomment below and update the code to test the property comparativeIndex
-      //var instance = new Election.Candidate();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property position (base name: "position")', function() {
-      // uncomment below and update the code to test the property position
+    it('should have the property firstName (base name: "firstName")', function() {
+      // uncomment below and update the code to test the property firstName
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });
@@ -134,14 +140,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property votes (base name: "votes")', function() {
-      // uncomment below and update the code to test the property votes
-      //var instance = new Election.Candidate();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property membership (base name: "membership")', function() {
-      // uncomment below and update the code to test the property membership
+    it('should have the property position (base name: "position")', function() {
+      // uncomment below and update the code to test the property position
       //var instance = new Election.Candidate();
       //expect(instance).to.be();
     });

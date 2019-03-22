@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -60,31 +60,31 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('finnish')) {
-        obj['finnish'] = ApiClient.convertToType(data['finnish'], 'String');
+      if (data.hasOwnProperty('swedish')) {
+        obj['swedish'] = ApiClient.convertToType(data['swedish'], 'String');
       }
       if (data.hasOwnProperty('english')) {
         obj['english'] = ApiClient.convertToType(data['english'], 'String');
       }
-      if (data.hasOwnProperty('swedish')) {
-        obj['swedish'] = ApiClient.convertToType(data['swedish'], 'String');
+      if (data.hasOwnProperty('finnish')) {
+        obj['finnish'] = ApiClient.convertToType(data['finnish'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} finnish
+   * @member {String} swedish
    */
-  exports.prototype['finnish'] = undefined;
+  exports.prototype['swedish'] = undefined;
   /**
    * @member {String} english
    */
   exports.prototype['english'] = undefined;
   /**
-   * @member {String} swedish
+   * @member {String} finnish
    */
-  exports.prototype['swedish'] = undefined;
+  exports.prototype['finnish'] = undefined;
 
 
 

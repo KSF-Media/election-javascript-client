@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -62,14 +62,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property standardPartyNumber (base name: "standardPartyNumber")', function() {
-      // uncomment below and update the code to test the property standardPartyNumber
+    it('should have the property nominatorNumber (base name: "nominatorNumber")', function() {
+      // uncomment below and update the code to test the property nominatorNumber
       //var instance = new Election.Nominator();
       //expect(instance).to.be();
     });
 
-    it('should have the property nominatorNumber (base name: "nominatorNumber")', function() {
-      // uncomment below and update the code to test the property nominatorNumber
+    it('should have the property votes (base name: "votes")', function() {
+      // uncomment below and update the code to test the property votes
       //var instance = new Election.Nominator();
       //expect(instance).to.be();
     });
@@ -86,20 +86,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property electoralAllianceNumber (base name: "electoralAllianceNumber")', function() {
-      // uncomment below and update the code to test the property electoralAllianceNumber
-      //var instance = new Election.Nominator();
-      //expect(instance).to.be();
-    });
-
     it('should have the property electoralAllianceName (base name: "electoralAllianceName")', function() {
       // uncomment below and update the code to test the property electoralAllianceName
-      //var instance = new Election.Nominator();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property votes (base name: "votes")', function() {
-      // uncomment below and update the code to test the property votes
       //var instance = new Election.Nominator();
       //expect(instance).to.be();
     });
@@ -110,8 +98,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property standardPartyNumber (base name: "standardPartyNumber")', function() {
+      // uncomment below and update the code to test the property standardPartyNumber
+      //var instance = new Election.Nominator();
+      //expect(instance).to.be();
+    });
+
     it('should have the property candidates (base name: "candidates")', function() {
       // uncomment below and update the code to test the property candidates
+      //var instance = new Election.Nominator();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property electoralAllianceNumber (base name: "electoralAllianceNumber")', function() {
+      // uncomment below and update the code to test the property electoralAllianceNumber
       //var instance = new Election.Nominator();
       //expect(instance).to.be();
     });

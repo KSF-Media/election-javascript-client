@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -56,14 +56,14 @@
       //expect(instance).to.be.a(Election.Area);
     });
 
-    it('should have the property info (base name: "info")', function() {
-      // uncomment below and update the code to test the property info
+    it('should have the property parent (base name: "parent")', function() {
+      // uncomment below and update the code to test the property parent
       //var instance = new Election.Area();
       //expect(instance).to.be();
     });
 
-    it('should have the property parent (base name: "parent")', function() {
-      // uncomment below and update the code to test the property parent
+    it('should have the property info (base name: "info")', function() {
+      // uncomment below and update the code to test the property info
       //var instance = new Election.Area();
       //expect(instance).to.be();
     });

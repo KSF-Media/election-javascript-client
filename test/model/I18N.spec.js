@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -56,8 +56,8 @@
       //expect(instance).to.be.a(Election.I18N);
     });
 
-    it('should have the property finnish (base name: "finnish")', function() {
-      // uncomment below and update the code to test the property finnish
+    it('should have the property swedish (base name: "swedish")', function() {
+      // uncomment below and update the code to test the property swedish
       //var instance = new Election.I18N();
       //expect(instance).to.be();
     });
@@ -68,8 +68,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property swedish (base name: "swedish")', function() {
-      // uncomment below and update the code to test the property swedish
+    it('should have the property finnish (base name: "finnish")', function() {
+      // uncomment below and update the code to test the property finnish
       //var instance = new Election.I18N();
       //expect(instance).to.be();
     });

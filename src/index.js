@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -16,16 +16,16 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Area', 'model/AreaInfo', 'model/AreaResponse', 'model/AreaType', 'model/AreasResponse', 'model/Candidate', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/LanguageRation', 'model/MunicipalityType', 'model/Nominator', 'model/Status', 'model/Votes', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/Area', 'model/AreaInfo', 'model/AreaResponse', 'model/AreaType', 'model/AreasResponse', 'model/Candidate', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/LanguageRation', 'model/MunicipalityType', 'model/Nominator', 'model/Status', 'model/Votes', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Area'), require('./model/AreaInfo'), require('./model/AreaResponse'), require('./model/AreaType'), require('./model/AreasResponse'), require('./model/Candidate'), require('./model/CandidateMembership'), require('./model/Gender'), require('./model/I18N'), require('./model/LanguageRation'), require('./model/MunicipalityType'), require('./model/Nominator'), require('./model/Status'), require('./model/Votes'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Area'), require('./model/AreaInfo'), require('./model/AreaResponse'), require('./model/AreaType'), require('./model/AreasResponse'), require('./model/Candidate'), require('./model/CandidateMembership'), require('./model/Gender'), require('./model/I18N'), require('./model/Language'), require('./model/LanguageRation'), require('./model/MunicipalityType'), require('./model/Nominator'), require('./model/Status'), require('./model/Votes'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, Area, AreaInfo, AreaResponse, AreaType, AreasResponse, Candidate, CandidateMembership, Gender, I18N, LanguageRation, MunicipalityType, Nominator, Status, Votes, DefaultApi) {
+}(function(ApiClient, Area, AreaInfo, AreaResponse, AreaType, AreasResponse, Candidate, CandidateMembership, Gender, I18N, Language, LanguageRation, MunicipalityType, Nominator, Status, Votes, DefaultApi) {
   'use strict';
 
   /**
-   * KSF_Medias_articles_service.<br>
+   * KSF_Medias_election_service.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -106,6 +106,11 @@
      * @property {module:model/I18N}
      */
     I18N: I18N,
+    /**
+     * The Language model constructor.
+     * @property {module:model/Language}
+     */
+    Language: Language,
     /**
      * The LanguageRation model constructor.
      * @property {module:model/LanguageRation}

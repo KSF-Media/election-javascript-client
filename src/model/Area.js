@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -60,24 +60,24 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('info')) {
-        obj['info'] = AreaInfo.constructFromObject(data['info']);
-      }
       if (data.hasOwnProperty('parent')) {
         obj['parent'] = ApiClient.convertToType(data['parent'], 'String');
+      }
+      if (data.hasOwnProperty('info')) {
+        obj['info'] = AreaInfo.constructFromObject(data['info']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/AreaInfo} info
-   */
-  exports.prototype['info'] = undefined;
-  /**
    * @member {String} parent
    */
   exports.prototype['parent'] = undefined;
+  /**
+   * @member {module:model/AreaInfo} info
+   */
+  exports.prototype['info'] = undefined;
 
 
 

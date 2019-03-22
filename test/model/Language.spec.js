@@ -48,11 +48,11 @@
       object[property] = value;
   }
 
-  describe('Status', function() {
-    it('should create an instance of Status', function() {
-      // uncomment below and update the code to test Status
-      //var instance = new Election.Status();
-      //expect(instance).to.be.a(Election.Status);
+  describe('Language', function() {
+    it('should create an instance of Language', function() {
+      // uncomment below and update the code to test Language
+      //var instance = new Election.Language();
+      //expect(instance).to.be.a(Election.Language);
     });
 
   });

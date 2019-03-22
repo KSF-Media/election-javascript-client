@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -62,12 +62,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property areaType (base name: "areaType")', function() {
-      // uncomment below and update the code to test the property areaType
-      //var instance = new Election.AreaInfo();
-      //expect(instance).to.be();
-    });
-
     it('should have the property joinedArea (base name: "joinedArea")', function() {
       // uncomment below and update the code to test the property joinedArea
       //var instance = new Election.AreaInfo();
@@ -80,14 +74,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property municipalityType (base name: "municipalityType")', function() {
+      // uncomment below and update the code to test the property municipalityType
+      //var instance = new Election.AreaInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new Election.AreaInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property municipalityType (base name: "municipalityType")', function() {
-      // uncomment below and update the code to test the property municipalityType
+    it('should have the property areaType (base name: "areaType")', function() {
+      // uncomment below and update the code to test the property areaType
       //var instance = new Election.AreaInfo();
       //expect(instance).to.be();
     });

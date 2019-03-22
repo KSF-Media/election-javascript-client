@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -43,17 +43,17 @@
    * @alias module:model/AreaResponse
    * @class
    * @param area {module:model/Area} 
-   * @param nominators {Array.<module:model/Nominator>} 
    * @param nominatorCount {Number} 
    * @param candidateCount {Number} 
+   * @param nominators {Array.<module:model/Nominator>} 
    */
-  var exports = function(area, nominators, nominatorCount, candidateCount) {
+  var exports = function(area, nominatorCount, candidateCount, nominators) {
     var _this = this;
 
     _this['area'] = area;
-    _this['nominators'] = nominators;
     _this['nominatorCount'] = nominatorCount;
     _this['candidateCount'] = candidateCount;
+    _this['nominators'] = nominators;
   };
 
   /**
@@ -69,14 +69,14 @@
       if (data.hasOwnProperty('area')) {
         obj['area'] = Area.constructFromObject(data['area']);
       }
-      if (data.hasOwnProperty('nominators')) {
-        obj['nominators'] = ApiClient.convertToType(data['nominators'], [Nominator]);
-      }
       if (data.hasOwnProperty('nominatorCount')) {
         obj['nominatorCount'] = ApiClient.convertToType(data['nominatorCount'], 'Number');
       }
       if (data.hasOwnProperty('candidateCount')) {
         obj['candidateCount'] = ApiClient.convertToType(data['candidateCount'], 'Number');
+      }
+      if (data.hasOwnProperty('nominators')) {
+        obj['nominators'] = ApiClient.convertToType(data['nominators'], [Nominator]);
       }
     }
     return obj;
@@ -87,10 +87,6 @@
    */
   exports.prototype['area'] = undefined;
   /**
-   * @member {Array.<module:model/Nominator>} nominators
-   */
-  exports.prototype['nominators'] = undefined;
-  /**
    * @member {Number} nominatorCount
    */
   exports.prototype['nominatorCount'] = undefined;
@@ -98,6 +94,10 @@
    * @member {Number} candidateCount
    */
   exports.prototype['candidateCount'] = undefined;
+  /**
+   * @member {Array.<module:model/Nominator>} nominators
+   */
+  exports.prototype['nominators'] = undefined;
 
 
 

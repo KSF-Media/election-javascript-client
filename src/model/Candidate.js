@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Status', 'model/Votes'], factory);
+    define(['ApiClient', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/Status', 'model/Votes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CandidateMembership'), require('./Gender'), require('./I18N'), require('./Status'), require('./Votes'));
+    module.exports = factory(require('../ApiClient'), require('./CandidateMembership'), require('./Gender'), require('./I18N'), require('./Language'), require('./Status'), require('./Votes'));
   } else {
     // Browser globals (root is window)
     if (!root.Election) {
       root.Election = {};
     }
-    root.Election.Candidate = factory(root.Election.ApiClient, root.Election.CandidateMembership, root.Election.Gender, root.Election.I18N, root.Election.Status, root.Election.Votes);
+    root.Election.Candidate = factory(root.Election.ApiClient, root.Election.CandidateMembership, root.Election.Gender, root.Election.I18N, root.Election.Language, root.Election.Status, root.Election.Votes);
   }
-}(this, function(ApiClient, CandidateMembership, Gender, I18N, Status, Votes) {
+}(this, function(ApiClient, CandidateMembership, Gender, I18N, Language, Status, Votes) {
   'use strict';
 
 
@@ -60,81 +60,85 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('candidateNumber')) {
-        obj['candidateNumber'] = ApiClient.convertToType(data['candidateNumber'], 'Number');
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = Status.constructFromObject(data['status']);
       }
-      if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
+      if (data.hasOwnProperty('membership')) {
+        obj['membership'] = CandidateMembership.constructFromObject(data['membership']);
       }
       if (data.hasOwnProperty('lastName')) {
         obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
       }
-      if (data.hasOwnProperty('gender')) {
-        obj['gender'] = Gender.constructFromObject(data['gender']);
-      }
       if (data.hasOwnProperty('age')) {
         obj['age'] = ApiClient.convertToType(data['age'], 'Number');
-      }
-      if (data.hasOwnProperty('occupation')) {
-        obj['occupation'] = ApiClient.convertToType(data['occupation'], 'String');
-      }
-      if (data.hasOwnProperty('homeMunicipalityCode')) {
-        obj['homeMunicipalityCode'] = ApiClient.convertToType(data['homeMunicipalityCode'], 'Number');
-      }
-      if (data.hasOwnProperty('homeMunicipalityName')) {
-        obj['homeMunicipalityName'] = I18N.constructFromObject(data['homeMunicipalityName']);
-      }
-      if (data.hasOwnProperty('language')) {
-        obj['language'] = ApiClient.convertToType(data['language'], 'String');
-      }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = Status.constructFromObject(data['status']);
       }
       if (data.hasOwnProperty('comparativeIndex')) {
         obj['comparativeIndex'] = ApiClient.convertToType(data['comparativeIndex'], 'Number');
       }
-      if (data.hasOwnProperty('position')) {
-        obj['position'] = ApiClient.convertToType(data['position'], 'Number');
+      if (data.hasOwnProperty('votes')) {
+        obj['votes'] = Votes.constructFromObject(data['votes']);
+      }
+      if (data.hasOwnProperty('candidateNumber')) {
+        obj['candidateNumber'] = ApiClient.convertToType(data['candidateNumber'], 'Number');
+      }
+      if (data.hasOwnProperty('homeMunicipalityCode')) {
+        obj['homeMunicipalityCode'] = ApiClient.convertToType(data['homeMunicipalityCode'], 'String');
+      }
+      if (data.hasOwnProperty('homeMunicipalityName')) {
+        obj['homeMunicipalityName'] = I18N.constructFromObject(data['homeMunicipalityName']);
+      }
+      if (data.hasOwnProperty('gender')) {
+        obj['gender'] = Gender.constructFromObject(data['gender']);
+      }
+      if (data.hasOwnProperty('occupation')) {
+        obj['occupation'] = ApiClient.convertToType(data['occupation'], 'String');
+      }
+      if (data.hasOwnProperty('language')) {
+        obj['language'] = Language.constructFromObject(data['language']);
+      }
+      if (data.hasOwnProperty('firstName')) {
+        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
       }
       if (data.hasOwnProperty('finalPosition')) {
         obj['finalPosition'] = ApiClient.convertToType(data['finalPosition'], 'Number');
       }
-      if (data.hasOwnProperty('votes')) {
-        obj['votes'] = Votes.constructFromObject(data['votes']);
-      }
-      if (data.hasOwnProperty('membership')) {
-        obj['membership'] = CandidateMembership.constructFromObject(data['membership']);
+      if (data.hasOwnProperty('position')) {
+        obj['position'] = ApiClient.convertToType(data['position'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} candidateNumber
+   * @member {module:model/Status} status
    */
-  exports.prototype['candidateNumber'] = undefined;
+  exports.prototype['status'] = undefined;
   /**
-   * @member {String} firstName
+   * @member {module:model/CandidateMembership} membership
    */
-  exports.prototype['firstName'] = undefined;
+  exports.prototype['membership'] = undefined;
   /**
    * @member {String} lastName
    */
   exports.prototype['lastName'] = undefined;
   /**
-   * @member {module:model/Gender} gender
-   */
-  exports.prototype['gender'] = undefined;
-  /**
    * @member {Number} age
    */
   exports.prototype['age'] = undefined;
   /**
-   * @member {String} occupation
+   * @member {Number} comparativeIndex
    */
-  exports.prototype['occupation'] = undefined;
+  exports.prototype['comparativeIndex'] = undefined;
   /**
-   * @member {Number} homeMunicipalityCode
+   * @member {module:model/Votes} votes
+   */
+  exports.prototype['votes'] = undefined;
+  /**
+   * @member {Number} candidateNumber
+   */
+  exports.prototype['candidateNumber'] = undefined;
+  /**
+   * @member {String} homeMunicipalityCode
    */
   exports.prototype['homeMunicipalityCode'] = undefined;
   /**
@@ -142,33 +146,29 @@
    */
   exports.prototype['homeMunicipalityName'] = undefined;
   /**
-   * @member {String} language
+   * @member {module:model/Gender} gender
+   */
+  exports.prototype['gender'] = undefined;
+  /**
+   * @member {String} occupation
+   */
+  exports.prototype['occupation'] = undefined;
+  /**
+   * @member {module:model/Language} language
    */
   exports.prototype['language'] = undefined;
   /**
-   * @member {module:model/Status} status
+   * @member {String} firstName
    */
-  exports.prototype['status'] = undefined;
-  /**
-   * @member {Number} comparativeIndex
-   */
-  exports.prototype['comparativeIndex'] = undefined;
-  /**
-   * @member {Number} position
-   */
-  exports.prototype['position'] = undefined;
+  exports.prototype['firstName'] = undefined;
   /**
    * @member {Number} finalPosition
    */
   exports.prototype['finalPosition'] = undefined;
   /**
-   * @member {module:model/Votes} votes
+   * @member {Number} position
    */
-  exports.prototype['votes'] = undefined;
-  /**
-   * @member {module:model/CandidateMembership} membership
-   */
-  exports.prototype['membership'] = undefined;
+  exports.prototype['position'] = undefined;
 
 
 

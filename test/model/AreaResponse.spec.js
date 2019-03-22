@@ -1,6 +1,6 @@
 /**
  * Election
- * KSF Media's articles service
+ * KSF Media's election service
  *
  * OpenAPI spec version: 1.0.0
  *
@@ -62,12 +62,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property nominators (base name: "nominators")', function() {
-      // uncomment below and update the code to test the property nominators
-      //var instance = new Election.AreaResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property nominatorCount (base name: "nominatorCount")', function() {
       // uncomment below and update the code to test the property nominatorCount
       //var instance = new Election.AreaResponse();
@@ -76,6 +70,12 @@
 
     it('should have the property candidateCount (base name: "candidateCount")', function() {
       // uncomment below and update the code to test the property candidateCount
+      //var instance = new Election.AreaResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nominators (base name: "nominators")', function() {
+      // uncomment below and update the code to test the property nominators
       //var instance = new Election.AreaResponse();
       //expect(instance).to.be();
     });
