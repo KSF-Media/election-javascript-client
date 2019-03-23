@@ -18,16 +18,16 @@ Gets all areas. Areas can be filtered by &#x60;type&#x60; and &#x60;parent&#x60;
 
 ### Example
 ```javascript
-import Election from 'election';
+var Election = require('election');
 
-let apiInstance = new Election.DefaultApi();
-let opts = {
+var apiInstance = new Election.DefaultApi();
+var opts = {
   'type': ["null"], // [String] | 
   'parent': ["null"] // [String] | 
 };
-apiInstance.areasGet(opts).then((data) => {
+apiInstance.areasGet(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -61,13 +61,13 @@ No authorization required
 
 ### Example
 ```javascript
-import Election from 'election';
+var Election = require('election');
 
-let apiInstance = new Election.DefaultApi();
-let identifier = "identifier_example"; // String | 
-apiInstance.areasIdentifierGet(identifier).then((data) => {
+var apiInstance = new Election.DefaultApi();
+var identifier = "identifier_example"; // String | 
+apiInstance.areasIdentifierGet(identifier).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
