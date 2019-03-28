@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AreaInfo'], factory);
+    define(['ApiClient', 'model/AreaIdentifier', 'model/AreaInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AreaInfo'));
+    module.exports = factory(require('../ApiClient'), require('./AreaIdentifier'), require('./AreaInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.Election) {
       root.Election = {};
     }
-    root.Election.Area = factory(root.Election.ApiClient, root.Election.AreaInfo);
+    root.Election.Area = factory(root.Election.ApiClient, root.Election.AreaIdentifier, root.Election.AreaInfo);
   }
-}(this, function(ApiClient, AreaInfo) {
+}(this, function(ApiClient, AreaIdentifier, AreaInfo) {
   'use strict';
 
 
@@ -61,7 +61,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('parent')) {
-        obj['parent'] = ApiClient.convertToType(data['parent'], 'String');
+        obj['parent'] = AreaIdentifier.constructFromObject(data['parent']);
       }
       if (data.hasOwnProperty('info')) {
         obj['info'] = AreaInfo.constructFromObject(data['info']);
@@ -71,7 +71,7 @@
   }
 
   /**
-   * @member {String} parent
+   * @member {module:model/AreaIdentifier} parent
    */
   exports.prototype['parent'] = undefined;
   /**

@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Area', 'model/AreaInfo', 'model/AreaResponse', 'model/AreaType', 'model/AreasResponse', 'model/Candidate', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/LanguageRation', 'model/MunicipalityType', 'model/Nominator', 'model/Status', 'model/Votes', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/Area', 'model/AreaIdentifier', 'model/AreaInfo', 'model/AreaResponse', 'model/AreaType', 'model/AreasResponse', 'model/Candidate', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/LanguageRation', 'model/MunicipalityType', 'model/Name', 'model/Nominator', 'model/Status', 'model/Votes', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Area'), require('./model/AreaInfo'), require('./model/AreaResponse'), require('./model/AreaType'), require('./model/AreasResponse'), require('./model/Candidate'), require('./model/CandidateMembership'), require('./model/Gender'), require('./model/I18N'), require('./model/Language'), require('./model/LanguageRation'), require('./model/MunicipalityType'), require('./model/Nominator'), require('./model/Status'), require('./model/Votes'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Area'), require('./model/AreaIdentifier'), require('./model/AreaInfo'), require('./model/AreaResponse'), require('./model/AreaType'), require('./model/AreasResponse'), require('./model/Candidate'), require('./model/CandidateMembership'), require('./model/Gender'), require('./model/I18N'), require('./model/Language'), require('./model/LanguageRation'), require('./model/MunicipalityType'), require('./model/Name'), require('./model/Nominator'), require('./model/Status'), require('./model/Votes'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, Area, AreaInfo, AreaResponse, AreaType, AreasResponse, Candidate, CandidateMembership, Gender, I18N, Language, LanguageRation, MunicipalityType, Nominator, Status, Votes, DefaultApi) {
+}(function(ApiClient, Area, AreaIdentifier, AreaInfo, AreaResponse, AreaType, AreasResponse, Candidate, CandidateMembership, Gender, I18N, Language, LanguageRation, MunicipalityType, Name, Nominator, Status, Votes, DefaultApi) {
   'use strict';
 
   /**
@@ -66,6 +66,11 @@
      * @property {module:model/Area}
      */
     Area: Area,
+    /**
+     * The AreaIdentifier model constructor.
+     * @property {module:model/AreaIdentifier}
+     */
+    AreaIdentifier: AreaIdentifier,
     /**
      * The AreaInfo model constructor.
      * @property {module:model/AreaInfo}
@@ -121,6 +126,11 @@
      * @property {module:model/MunicipalityType}
      */
     MunicipalityType: MunicipalityType,
+    /**
+     * The Name model constructor.
+     * @property {module:model/Name}
+     */
+    Name: Name,
     /**
      * The Nominator model constructor.
      * @property {module:model/Nominator}

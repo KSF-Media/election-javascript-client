@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **String** |  | 
+**identifier** | [**AreaIdentifier**](AreaIdentifier.md) |  | 
 **joinedArea** | **Boolean** |  | [optional] 
 **abbreviation** | [**I18N**](I18N.md) |  | 
 **municipalityType** | [**MunicipalityType**](MunicipalityType.md) |  | [optional] 

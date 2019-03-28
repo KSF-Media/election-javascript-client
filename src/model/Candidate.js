@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/Status', 'model/Votes'], factory);
+    define(['ApiClient', 'model/CandidateMembership', 'model/Gender', 'model/I18N', 'model/Language', 'model/Name', 'model/Status', 'model/Votes'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CandidateMembership'), require('./Gender'), require('./I18N'), require('./Language'), require('./Status'), require('./Votes'));
+    module.exports = factory(require('../ApiClient'), require('./CandidateMembership'), require('./Gender'), require('./I18N'), require('./Language'), require('./Name'), require('./Status'), require('./Votes'));
   } else {
     // Browser globals (root is window)
     if (!root.Election) {
       root.Election = {};
     }
-    root.Election.Candidate = factory(root.Election.ApiClient, root.Election.CandidateMembership, root.Election.Gender, root.Election.I18N, root.Election.Language, root.Election.Status, root.Election.Votes);
+    root.Election.Candidate = factory(root.Election.ApiClient, root.Election.CandidateMembership, root.Election.Gender, root.Election.I18N, root.Election.Language, root.Election.Name, root.Election.Status, root.Election.Votes);
   }
-}(this, function(ApiClient, CandidateMembership, Gender, I18N, Language, Status, Votes) {
+}(this, function(ApiClient, CandidateMembership, Gender, I18N, Language, Name, Status, Votes) {
   'use strict';
 
 
@@ -67,7 +67,7 @@
         obj['membership'] = CandidateMembership.constructFromObject(data['membership']);
       }
       if (data.hasOwnProperty('lastName')) {
-        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
+        obj['lastName'] = Name.constructFromObject(data['lastName']);
       }
       if (data.hasOwnProperty('age')) {
         obj['age'] = ApiClient.convertToType(data['age'], 'Number');
@@ -97,7 +97,7 @@
         obj['language'] = Language.constructFromObject(data['language']);
       }
       if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
+        obj['firstName'] = Name.constructFromObject(data['firstName']);
       }
       if (data.hasOwnProperty('finalPosition')) {
         obj['finalPosition'] = ApiClient.convertToType(data['finalPosition'], 'Number');
@@ -118,7 +118,7 @@
    */
   exports.prototype['membership'] = undefined;
   /**
-   * @member {String} lastName
+   * @member {module:model/Name} lastName
    */
   exports.prototype['lastName'] = undefined;
   /**
@@ -158,7 +158,7 @@
    */
   exports.prototype['language'] = undefined;
   /**
-   * @member {String} firstName
+   * @member {module:model/Name} firstName
    */
   exports.prototype['firstName'] = undefined;
   /**

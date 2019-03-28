@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parent** | **String** |  | [optional] 
+**parent** | [**AreaIdentifier**](AreaIdentifier.md) |  | [optional] 
 **info** | [**AreaInfo**](AreaInfo.md) |  | 
 
 
