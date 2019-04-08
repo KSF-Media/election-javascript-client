@@ -59,7 +59,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('partyIdentifier')) {
-        obj['partyIdentifier'] = ApiClient.convertToType(data['partyIdentifier'], 'Number');
+        obj['partyIdentifier'] = ApiClient.convertToType(data['partyIdentifier'], 'String');
       }
       if (data.hasOwnProperty('nominatorNumber')) {
         obj['nominatorNumber'] = ApiClient.convertToType(data['nominatorNumber'], 'Number');
@@ -93,7 +93,7 @@
   }
 
   /**
-   * @member {Number} partyIdentifier
+   * @member {String} partyIdentifier
    */
   exports.prototype['partyIdentifier'] = undefined;
   /**

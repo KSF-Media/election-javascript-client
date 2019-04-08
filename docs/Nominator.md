@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**partyIdentifier** | **Number** |  | [optional] 
+**partyIdentifier** | **String** |  | [optional] 
 **nominatorNumber** | **Number** |  | [optional] 
 **votes** | [**Votes**](Votes.md) |  | [optional] 
 **abbreviation** | [**I18N**](I18N.md) |  | [optional] 
