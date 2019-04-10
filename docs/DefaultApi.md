@@ -51,7 +51,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+ - **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
 
 <a name="areasIdentifierGet"></a>
 # **areasIdentifierGet**
@@ -90,5 +90,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+ - **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
 

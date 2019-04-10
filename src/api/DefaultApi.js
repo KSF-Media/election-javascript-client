@@ -81,7 +81,7 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
+      var accepts = ['text/plain;charset=utf-8', 'application/json;charset=utf-8'];
       var returnType = AreasResponse;
 
       return this.apiClient.callApi(
@@ -133,7 +133,7 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
+      var accepts = ['text/plain;charset=utf-8', 'application/json;charset=utf-8'];
       var returnType = AreaResponse;
 
       return this.apiClient.callApi(
