@@ -55,7 +55,7 @@ No authorization required
 
 <a name="areasIdentifierGet"></a>
 # **areasIdentifierGet**
-> AreaResponse areasIdentifierGet(identifier)
+> AreaResponse areasIdentifierGet(identifier, opts)
 
 
 
@@ -65,7 +65,10 @@ var Election = require('election');
 
 var apiInstance = new Election.DefaultApi();
 var identifier = "identifier_example"; // String | 
-apiInstance.areasIdentifierGet(identifier).then(function(data) {
+var opts = {
+  'candidateStatus': ["null"] // [String] | 
+};
+apiInstance.areasIdentifierGet(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -78,6 +81,7 @@ apiInstance.areasIdentifierGet(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**|  | 
+ **candidateStatus** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 

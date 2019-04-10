@@ -108,9 +108,12 @@
 
     /**
      * @param {String} identifier 
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/String>} opts.candidateStatus 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AreaResponse} and HTTP response
      */
-    this.areasIdentifierGetWithHttpInfo = function(identifier) {
+    this.areasIdentifierGetWithHttpInfo = function(identifier, opts) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'identifier' is set
@@ -125,6 +128,10 @@
       var queryParams = {
       };
       var collectionQueryParams = {
+        'candidate.status': {
+          value: opts['candidateStatus'],
+          collectionFormat: 'multi'
+        },
       };
       var headerParams = {
       };
@@ -145,10 +152,12 @@
 
     /**
      * @param {String} identifier 
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/String>} opts.candidateStatus 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AreaResponse}
      */
-    this.areasIdentifierGet = function(identifier) {
-      return this.areasIdentifierGetWithHttpInfo(identifier)
+    this.areasIdentifierGet = function(identifier, opts) {
+      return this.areasIdentifierGetWithHttpInfo(identifier, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
