@@ -46,14 +46,16 @@
    * @param nominatorCount {Number} 
    * @param candidateCount {Number} 
    * @param nominators {Array.<module:model/Nominator>} 
+   * @param timestamp {String} 
    */
-  var exports = function(area, nominatorCount, candidateCount, nominators) {
+  var exports = function(area, nominatorCount, candidateCount, nominators, timestamp) {
     var _this = this;
 
     _this['area'] = area;
     _this['nominatorCount'] = nominatorCount;
     _this['candidateCount'] = candidateCount;
     _this['nominators'] = nominators;
+    _this['timestamp'] = timestamp;
   };
 
   /**
@@ -78,6 +80,9 @@
       if (data.hasOwnProperty('nominators')) {
         obj['nominators'] = ApiClient.convertToType(data['nominators'], [Nominator]);
       }
+      if (data.hasOwnProperty('timestamp')) {
+        obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'String');
+      }
     }
     return obj;
   }
@@ -98,6 +103,10 @@
    * @member {Array.<module:model/Nominator>} nominators
    */
   exports.prototype['nominators'] = undefined;
+  /**
+   * @member {String} timestamp
+   */
+  exports.prototype['timestamp'] = undefined;
 
 
 

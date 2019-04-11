@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **nominatorCount** | **Number** |  | 
 **candidateCount** | **Number** |  | 
 **nominators** | [**[Nominator]**](Nominator.md) |  | 
+**timestamp** | **String** |  | 
 
 
