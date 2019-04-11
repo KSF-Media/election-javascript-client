@@ -64,6 +64,9 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('calculationStatus')) {
+        obj['calculationStatus'] = ApiClient.convertToType(data['calculationStatus'], 'Number');
+      }
       if (data.hasOwnProperty('identifier')) {
         obj['identifier'] = AreaIdentifier.constructFromObject(data['identifier']);
       }
@@ -92,6 +95,10 @@
     return obj;
   }
 
+  /**
+   * @member {Number} calculationStatus
+   */
+  exports.prototype['calculationStatus'] = undefined;
   /**
    * @member {module:model/AreaIdentifier} identifier
    */

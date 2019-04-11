@@ -56,6 +56,12 @@
       //expect(instance).to.be.a(Election.AreaInfo);
     });
 
+    it('should have the property calculationStatus (base name: "calculationStatus")', function() {
+      // uncomment below and update the code to test the property calculationStatus
+      //var instance = new Election.AreaInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property identifier (base name: "identifier")', function() {
       // uncomment below and update the code to test the property identifier
       //var instance = new Election.AreaInfo();

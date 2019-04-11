@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**calculationStatus** | **Number** |  | [optional] 
 **identifier** | [**AreaIdentifier**](AreaIdentifier.md) |  | 
 **joinedArea** | **Boolean** |  | [optional] 
 **abbreviation** | [**I18N**](I18N.md) |  | 
