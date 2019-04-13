@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **calculationStatus** | **Number** |  | [optional] 
-**identifier** | [**AreaIdentifier**](AreaIdentifier.md) |  | 
+**identifier** | **String** |  | 
 **joinedArea** | **Boolean** |  | [optional] 
 **abbreviation** | [**I18N**](I18N.md) |  | 
 **municipalityType** | [**MunicipalityType**](MunicipalityType.md) |  | [optional] 

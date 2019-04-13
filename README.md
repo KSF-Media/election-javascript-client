@@ -122,7 +122,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Election.Area](docs/Area.md)
- - [Election.AreaIdentifier](docs/AreaIdentifier.md)
  - [Election.AreaInfo](docs/AreaInfo.md)
  - [Election.AreaResponse](docs/AreaResponse.md)
  - [Election.AreaType](docs/AreaType.md)
@@ -134,7 +133,6 @@ Class | Method | HTTP request | Description
  - [Election.Language](docs/Language.md)
  - [Election.LanguageRation](docs/LanguageRation.md)
  - [Election.MunicipalityType](docs/MunicipalityType.md)
- - [Election.Name](docs/Name.md)
  - [Election.Nominator](docs/Nominator.md)
  - [Election.Status](docs/Status.md)
  - [Election.Votes](docs/Votes.md)

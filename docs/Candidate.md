@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**Status**](Status.md) |  | [optional] 
 **membership** | [**CandidateMembership**](CandidateMembership.md) |  | [optional] 
-**lastName** | [**Name**](Name.md) |  | [optional] 
+**lastName** | **String** |  | [optional] 
 **age** | **Number** |  | [optional] 
 **comparativeIndex** | **Number** |  | [optional] 
 **votes** | [**Votes**](Votes.md) |  | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **gender** | [**Gender**](Gender.md) |  | [optional] 
 **occupation** | **String** |  | [optional] 
 **language** | [**Language**](Language.md) |  | [optional] 
-**firstName** | [**Name**](Name.md) |  | [optional] 
+**firstName** | **String** |  | [optional] 
 **finalPosition** | **Number** |  | [optional] 
 **position** | **Number** |  | [optional] 
 

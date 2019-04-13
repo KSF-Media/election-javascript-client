@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AreaIdentifier', 'model/AreaType', 'model/I18N', 'model/LanguageRation', 'model/MunicipalityType'], factory);
+    define(['ApiClient', 'model/AreaType', 'model/I18N', 'model/LanguageRation', 'model/MunicipalityType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AreaIdentifier'), require('./AreaType'), require('./I18N'), require('./LanguageRation'), require('./MunicipalityType'));
+    module.exports = factory(require('../ApiClient'), require('./AreaType'), require('./I18N'), require('./LanguageRation'), require('./MunicipalityType'));
   } else {
     // Browser globals (root is window)
     if (!root.Election) {
       root.Election = {};
     }
-    root.Election.AreaInfo = factory(root.Election.ApiClient, root.Election.AreaIdentifier, root.Election.AreaType, root.Election.I18N, root.Election.LanguageRation, root.Election.MunicipalityType);
+    root.Election.AreaInfo = factory(root.Election.ApiClient, root.Election.AreaType, root.Election.I18N, root.Election.LanguageRation, root.Election.MunicipalityType);
   }
-}(this, function(ApiClient, AreaIdentifier, AreaType, I18N, LanguageRation, MunicipalityType) {
+}(this, function(ApiClient, AreaType, I18N, LanguageRation, MunicipalityType) {
   'use strict';
 
 
@@ -42,7 +42,7 @@
    * Constructs a new <code>AreaInfo</code>.
    * @alias module:model/AreaInfo
    * @class
-   * @param identifier {module:model/AreaIdentifier} 
+   * @param identifier {String} 
    * @param abbreviation {module:model/I18N} 
    * @param areaType {module:model/AreaType} 
    */
@@ -68,7 +68,7 @@
         obj['calculationStatus'] = ApiClient.convertToType(data['calculationStatus'], 'Number');
       }
       if (data.hasOwnProperty('identifier')) {
-        obj['identifier'] = AreaIdentifier.constructFromObject(data['identifier']);
+        obj['identifier'] = ApiClient.convertToType(data['identifier'], 'String');
       }
       if (data.hasOwnProperty('joinedArea')) {
         obj['joinedArea'] = ApiClient.convertToType(data['joinedArea'], 'Boolean');
@@ -100,7 +100,7 @@
    */
   exports.prototype['calculationStatus'] = undefined;
   /**
-   * @member {module:model/AreaIdentifier} identifier
+   * @member {String} identifier
    */
   exports.prototype['identifier'] = undefined;
   /**
