@@ -8,8 +8,9 @@ Method | HTTP request | Description
 [**areasIdentifierGet**](DefaultApi.md#areasIdentifierGet) | **GET** /areas/{identifier} | 
 
 
-<a name="areasGet"></a>
-# **areasGet**
+
+## areasGet
+
 > AreasResponse areasGet(opts)
 
 
@@ -17,23 +18,25 @@ Method | HTTP request | Description
 Gets all areas. Areas can be filtered by &#x60;type&#x60; and &#x60;parent&#x60;.
 
 ### Example
-```javascript
-var Election = require('election');
 
-var apiInstance = new Election.DefaultApi();
-var opts = {
+```javascript
+import Election from 'election';
+
+let apiInstance = new Election.DefaultApi();
+let opts = {
   'type': ["null"], // [String] | 
   'parent': ["null"] // [String] | 
 };
-apiInstance.areasGet(opts).then(function(data) {
+apiInstance.areasGet(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -50,33 +53,36 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
 
-<a name="areasIdentifierGet"></a>
-# **areasIdentifierGet**
+
+## areasIdentifierGet
+
 > AreaResponse areasIdentifierGet(identifier, opts)
 
 
 
 ### Example
-```javascript
-var Election = require('election');
 
-var apiInstance = new Election.DefaultApi();
-var identifier = "identifier_example"; // String | 
-var opts = {
+```javascript
+import Election from 'election';
+
+let apiInstance = new Election.DefaultApi();
+let identifier = "identifier_example"; // String | 
+let opts = {
   'candidateStatus': ["null"] // [String] | 
 };
-apiInstance.areasIdentifierGet(identifier, opts).then(function(data) {
+apiInstance.areasIdentifierGet(identifier, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -93,6 +99,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: text/plain;charset=utf-8, application/json;charset=utf-8
 

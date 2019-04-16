@@ -1,6 +1,7 @@
 # Election.CandidateMembership
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MEMBER_OF_PARLIAMENT** | **Boolean** |  | [optional] 

@@ -1,6 +1,7 @@
 # Election.AreaResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **area** | [**Area**](Area.md) |  | 

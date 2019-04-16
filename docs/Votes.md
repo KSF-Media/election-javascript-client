@@ -1,6 +1,7 @@
 # Election.Votes
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advanceVotes** | **Number** |  | [optional] 

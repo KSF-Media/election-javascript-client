@@ -1,6 +1,7 @@
 # Election.Nominator
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **partyIdentifier** | **String** |  | [optional] 

@@ -1,6 +1,7 @@
 # Election.AreaInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **calculationStatus** | **Number** |  | [optional] 
