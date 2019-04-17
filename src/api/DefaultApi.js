@@ -37,7 +37,7 @@ export default class DefaultApi {
 
 
     /**
-     * Gets all areas. Areas can be filtered by &#x60;type&#x60; and &#x60;parent&#x60;.
+     * Gets all areas. Areas can be filtered by `type` and `parent`.
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/String>} opts.type 
      * @param {Array.<String>} opts.parent 
@@ -70,7 +70,7 @@ export default class DefaultApi {
     }
 
     /**
-     * Gets all areas. Areas can be filtered by &#x60;type&#x60; and &#x60;parent&#x60;.
+     * Gets all areas. Areas can be filtered by `type` and `parent`.
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/String>} opts.type 
      * @param {Array.<String>} opts.parent 
